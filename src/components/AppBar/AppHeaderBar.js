@@ -1,53 +1,63 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from './AppBar';
 
+import PropTypes from 'prop-types';
 import clsx from 'clsx';
+import Headroom from 'react-headroom';
+
+import AppBar from '@material-ui/core/AppBar';
 import Link from '@material-ui/core/Link';
 import Avatar from '@material-ui/core/Avatar'
 import Badge from '@material-ui/core/Badge';
 import Hidden from '@material-ui/core/Hidden';
 import { withStyles } from '@material-ui/core/styles';
-import Toolbar, { styles as toolbarStyles } from './Toolbar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 import avatarImg from "../../images/yo32.jpeg";
 
-
 const styles = (theme) => ({
-    root: {
-      flex: 1,
-    },
     title: {
       fontSize: 24,
-    },
-    placeholder: toolbarStyles(theme).root,
-    toolbar: {
-      justifyContent: 'space-between',
+      display: 'flex',
+      marginLeft: theme.spacing(3),
     },
     left: {
       flex: 1,
     },
-    leftLinkActive: {
-      color: theme.palette.common.white,
-    },
     right: {
       flex: 1,
-      display: 'flex',
+      display: 'none',
       justifyContent: 'flex-end',
     },
     rightLink: {
       fontSize: 16,
       color: theme.palette.common.white,
       marginLeft: theme.spacing(3),
+      '&:hover': {
+        '& $imageMarked': {
+          display: 'block',
+        },
+      },
     },
     linkSecondary: {
       color: theme.palette.secondary.main,
     },
-    avatar: {
-      marginRight: theme.spacing(3),
-    }
+    imageTitle: {
+      position: 'relative',
+      //padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
+      paddingBottom: theme.spacing(1)
+    },
+    imageMarked: {
+      height: 3,
+      width: 18,
+      position: 'absolute',
+      bottom: -2,
+      left: 'calc(50% - 9px)',
+      transition: theme.transitions.create('opacity'),
+      backgroundColor: theme.palette.common.white,
+      display: 'none'
+    },
   });
-
 
   const StyledBadge = withStyles((theme) => ({
     badge: {
@@ -83,10 +93,11 @@ function AppHeaderBar(props) {
 
     return (
         <div className={classes.root}>
-            <AppBar position="fixed">
-                <Toolbar className={classes.toolbar}>
+          <Headroom>
+            <AppBar position="sticky">
+                <Toolbar>
                   <div className={classes.left} />
-                  <StyledBadge className={classes.avatar}
+                  <StyledBadge
                     overlap="circle"
                     anchorOrigin={{
                       vertical: 'bottom',
@@ -101,41 +112,63 @@ function AppHeaderBar(props) {
                     color="inherit"
                     className={classes.title}
                     href="/">
-                    
-                    {'John Quiroga C.'}
+                    {'John Quiroga'}
                   </Link>
                   <div className={classes.right}>
                     <Hidden xsDown>
-                    <Link
-                      color="inherit"
-                      variant="h6"
-                      underline="none"
-                      className={classes.rightLink}
-                      href="/sign-in/" >
-                      {'Blog'}
-                    </Link>
-                    <Link
-                      color="inherit"
-                      variant="h6"
-                      underline="none"
-                      className={classes.rightLink}
-                      href="/sign-in/" >
-                      {'Projects'}
-                    </Link>
-                    <Link
-                      variant="h6"
-                      underline="none"
-                      className={clsx(classes.rightLink, classes.linkSecondary)}
-                      href="/sign-up/" >
-                      {'Contact'}
-                    </Link>
+                      <Link
+                        color="inherit"
+                        variant="h6"
+                        underline="none"
+                        className={classes.rightLink}
+                        href="/sign-in/" >
+                          <Typography
+                          component="span"
+                          variant="h6"
+                          color="inherit"
+                          className={classes.imageTitle}
+                        >
+                        {'Blog'}
+                          <span className={classes.imageMarked} />
+                        </Typography>
+                      </Link>
+                      <Link
+                        color="inherit"
+                        variant="h6"
+                        underline="none"
+                        className={classes.rightLink}
+                        href="/sign-in/" >
+                          <Typography
+                          component="span"
+                          variant="h6"
+                          color="inherit"
+                          className={classes.imageTitle}
+                        >
+                        {'Projects'}
+                          <span className={classes.imageMarked} />
+                        </Typography>
+                      </Link>
+                      <Link
+                        variant="h6"
+                        underline="none"
+                        className={clsx(classes.rightLink, classes.linkSecondary)}
+                        href="/sign-up/" >
+                        <Typography
+                          component="span"
+                          variant="h6"
+                          color="inherit"
+                          className={classes.imageTitle}
+                        >
+                          {'Contact'}
+                          <span className={classes.imageMarked} />
+                        </Typography>
+                      </Link>
                     </Hidden>
                   </div>
+                  <div className={classes.left} />
                 </Toolbar>
             </AppBar>
-            <Toolbar className={classes.toolbar}>
-              hidden
-            </Toolbar>
+            </Headroom>
         </div>
     );
 }
