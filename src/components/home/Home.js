@@ -1,80 +1,31 @@
-import withRoot from "../theme/withRoot";
 
 import React from 'react';
-import AppHeaderBar from '../AppBar/AppHeaderBar'
 
-function Home() {
+import AppHeaderBar from '../AppBar/AppHeaderBar'
+import AppFooter from '../Footer/AppFooter'
+
+import { withStyles } from '@material-ui/core/styles';
+import withRoot from "../theme/withRoot";
+
+const styles = (theme) => ({
+    root: {
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+    }
+});
+
+function Home(props) {
+    const { classes } = props
 
     return (
         <React.Fragment>
-            <AppHeaderBar />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-        
+            <div className={classes.root}>
+                <AppHeaderBar />
+                <AppFooter />
+            </div>
         </React.Fragment>
     );
 }
 
-export default withRoot(Home);
+export default withRoot(withStyles(styles)(Home));

@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import Link from '@material-ui/core/Link';
 import Avatar from '@material-ui/core/Avatar'
 import Badge from '@material-ui/core/Badge';
+import Hidden from '@material-ui/core/Hidden';
 import { withStyles } from '@material-ui/core/styles';
 import Toolbar, { styles as toolbarStyles } from './Toolbar';
 
@@ -13,6 +14,9 @@ import avatarImg from "../../images/yo32.jpeg";
 
 
 const styles = (theme) => ({
+    root: {
+      flex: 1,
+    },
     title: {
       fontSize: 24,
     },
@@ -78,7 +82,7 @@ function AppHeaderBar(props) {
     const { classes } = props
 
     return (
-        <div>
+        <div className={classes.root}>
             <AppBar position="fixed">
                 <Toolbar className={classes.toolbar}>
                   <div className={classes.left} />
@@ -101,6 +105,7 @@ function AppHeaderBar(props) {
                     {'John Quiroga C.'}
                   </Link>
                   <div className={classes.right}>
+                    <Hidden xsDown>
                     <Link
                       color="inherit"
                       variant="h6"
@@ -124,9 +129,13 @@ function AppHeaderBar(props) {
                       href="/sign-up/" >
                       {'Contact'}
                     </Link>
+                    </Hidden>
                   </div>
                 </Toolbar>
             </AppBar>
+            <Toolbar className={classes.toolbar}>
+              hidden
+            </Toolbar>
         </div>
     );
 }
