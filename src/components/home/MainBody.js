@@ -1,10 +1,8 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 
 const styles = (theme) => ({
   mainBody: {
@@ -169,8 +167,8 @@ function MainBody(props) {
             
             <div class="contact-container container-block">
                 <ul class="list-unstyled contact-list">
-                    <li class="linkedin"><i class="fa fa-linkedin"></i><a href="#" target="https://www.linkedin.com/in/johnquirogac/">LinkedIn</a></li>
-                    <li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/john_quirogac" target="_blank">@john_quirogac</a></li>
+                    <li class="linkedin"><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/johnquirogac/" >LinkedIn</a></li>
+                    <li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/john_quirogac" >@john_quirogac</a></li>
                 </ul>
             </div>
             <div class="education-container container-block">
@@ -198,7 +196,7 @@ function MainBody(props) {
                 <h2 class="container-block-title">Languages</h2>
                 <ul class="list-unstyled interests-list">
                     <li>Spanish <span class="lang-desc">(Native)</span></li>
-                    <li>Spanish <span class="lang-desc">B1</span></li>
+                    <li>English <span class="lang-desc">B1</span></li>
                 </ul>
             </div>
             
