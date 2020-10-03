@@ -272,22 +272,6 @@ function MainBody(props) {
               </Card>
                 
             </div>
-            
-            <div class="section projects-section">
-                <h2 class="section-title"><i class="fa fa-archive"></i>Projects</h2>
-                <div class="intro">
-                    <p>I was worked on independient projects fron instatutions and personal work</p>
-                </div>
-                <div class="item">
-                    <span class="project-title"><a href="https://play.google.com/store/apps/details?id=com.udistrital.eventos">Eventos Academicos UD</a></span> - <span class="project-tagline">Hibrid Mobile aplication for administrate academic events, with user modules, register of events, calendar, asitance, certifications and geolocations.</span>
-                    
-                </div>
-                <div class="item">
-                    <span class="project-title"><a href="#hook" target="_blank">Odontology Module</a></span> - 
-                    <span class="project-tagline">Web Module for administrate odontology area, whit manage historial and adontograma develop in Symphony and Raphael Js. </span>
-                </div>
-            </div>
-            
             <div class="skills-section section">
                 <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
                 <div className={classes.skillset}>    
