@@ -7,7 +7,6 @@ import Grid from '@material-ui/core/Grid';
 import Chip from '@material-ui/core/Chip';
 
 import Avatar from '@material-ui/core/Avatar';
-import FaceIcon from '@material-ui/icons/Face';
 import DoneIcon from '@material-ui/icons/Done';
 
 import List from '@material-ui/core/List';
@@ -15,7 +14,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ImageIcon from '@material-ui/icons/Image';
-import WorkIcon from '@material-ui/icons/Work';
 import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import Divider from '@material-ui/core/Divider';
@@ -25,20 +23,28 @@ import Typography from '@material-ui/core/Typography';
 
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
-import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+
+import LinkedInIcon from "../../images/linkedin.svg";
+import TwitterIcon from "../../images/twitter.svg";
+import InstagramIcon from "../../images/instagram.png";
+
+import Link from '@material-ui/core/Link';
 
 const styles = (theme) => ({
   mainBody: {
     flex: 1,
+  },
+  mainBodyLeft: {
+    [theme.breakpoints.up('xs')]: {
+      marginRight: theme.spacing(2),
+    },
+    [theme.breakpoints.up('md')]: {
+      marginRight: theme.spacing(5.5),
+    },
   },
   paper: {
     color: theme.palette.text.secondary,
@@ -95,7 +101,7 @@ function MainBody(props) {
         <Box clone order={{ xs: 3, sm: 2 }}>
           <Grid item xs={12} sm={9}>
             
-            <div class="main-wrapper" >
+            <div class="main-wrapper" className={classes.mainBodyLeft}>
             
             <div class="section summary-section">
                 <h2 class="section-title"><i class="fa fa-user"></i>Career Profile</h2>
@@ -276,49 +282,43 @@ function MainBody(props) {
                 <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
                 <div className={classes.skillset}>    
                 <Chip label="Java"
-                  avatar={<FaceIcon />}
                   clickable
-                  color="success"
+                  color="secondary"
                   deleteIcon={<DoneIcon />}
                   onDelete={handleDelete}
                   variant="outlined"
                 />
                 <Chip label="Kotlin"
-                  avatar={<FaceIcon />}
                   clickable
-                  color="success"
+                  color="secondary"
                   deleteIcon={<DoneIcon />}
                   onDelete={handleDelete}
                   variant="outlined"
                 />
                 <Chip label="Spring Boot"
-                  avatar={<FaceIcon />}
                   clickable
-                  color="success"
+                  color="secondary"
                   deleteIcon={<DoneIcon />}
                   onDelete={handleDelete}
                   variant="outlined"
                 />
                 <Chip label="Spring Security"
-                  avatar={<FaceIcon />}
                   clickable
-                  color="success"
+                  color="secondary"
                   deleteIcon={<DoneIcon />}
                   onDelete={handleDelete}
                   variant="outlined"
                 />
                 <Chip label="Java EE"
-                  avatar={<FaceIcon />}
                   clickable
-                  color="success"
+                  color="secondary"
                   deleteIcon={<DoneIcon />}
                   onDelete={handleDelete}
                   variant="outlined"
                 />
                 <Chip label="PL-SQL"
-                  avatar={<FaceIcon />}
                   clickable
-                  color="success"
+                  color="secondary"
                   deleteIcon={<DoneIcon />}
                   onDelete={handleDelete}
                   variant="outlined"
@@ -340,13 +340,41 @@ function MainBody(props) {
                 <img class="profile" src="assets/images/profile.png" alt="" />
                 <h3 class="tagline">Software Development Engineer</h3>
             </div>
-            
-            <div class="contact-container container-block">
-                <ul class="list-unstyled contact-list">
-                    <li class="linkedin"><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/johnquirogac/" >LinkedIn</a></li>
-                    <li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/john_quirogac" >@john_quirogac</a></li>
-                </ul>
-            </div>
+            <List className={classes.root} >
+                  <ListItem>
+                    <ListItemAvatar>
+                      <Avatar src={LinkedInIcon} />
+                    </ListItemAvatar>
+                    <ListItemText>
+                    <Link underline="none" color="inherit"
+                    href="https://www.linkedin.com/in/johnquirogac/">
+                    {'LinkedIn'}
+                    </Link>
+                    </ListItemText>
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                    <Avatar src={TwitterIcon} />
+                    </ListItemAvatar>
+                    <ListItemText>
+                    <Link underline="none" color="inherit"
+                    href="https://twitter.com/john_quirogac">
+                    {'@john_quirogac'}
+                    </Link>
+                    </ListItemText>
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                    <Avatar src={InstagramIcon} />
+                    </ListItemAvatar>
+                    <ListItemText>
+                    <Link underline="none" color="inherit"
+                    href="https://www.instagram.com/john_quirogac/">
+                    {'@john_quirogac'}
+                    </Link>
+                    </ListItemText>
+                  </ListItem>
+                </List>
             <div class="education-container container-block">
                 <h2 class="container-block-title">Education</h2>
                 <List className={classes.root}>
