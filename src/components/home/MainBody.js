@@ -1,5 +1,5 @@
 import React from 'react';
-import clsx from 'clsx';
+
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
@@ -24,9 +24,6 @@ import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
-import Collapse from '@material-ui/core/Collapse';
-import IconButton from '@material-ui/core/IconButton';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import LinkedInIcon from "../../images/linkedin.svg";
 import TwitterIcon from "../../images/twitter.svg";
@@ -75,21 +72,6 @@ const styles = (theme) => ({
 
 function MainBody(props) {
   const { classes } = props;
-  const [expanded, setExpanded] = React.useState(false);
-  const [expanded2, setExpanded2] = React.useState(false);
-  const [expanded3, setExpanded3] = React.useState(false);
-
-  const handleExpandClick1 = () => {
-    setExpanded(!expanded);
-  };
-
-  const handleExpandClick2 = () => {
-    setExpanded2(!expanded2);
-  };
-
-  const handleExpandClick3 = () => {
-    setExpanded3(!expanded3);
-  };
 
   const handleDelete = () => {
     console.info('You clicked the delete icon.');
@@ -121,18 +103,6 @@ function MainBody(props) {
                       DF
                     </Avatar>
                   }
-                  action={
-                    <IconButton
-                    className={clsx(classes.expand, {
-                      [classes.expandOpen]: expanded,
-                    })}
-                    onClick={handleExpandClick1}
-                    aria-expanded={expanded}
-                    aria-label="show more"
-                  >
-                    <ExpandMoreIcon />
-                  </IconButton>
-                  }
                   title={
                     <React.Fragment>
                       <Typography
@@ -152,8 +122,7 @@ function MainBody(props) {
                   Tech Lead | Software Development Engineer
                   </Typography>
                 </CardContent>
-                <Collapse in={expanded} timeout="auto" unmountOnExit>
-                  <CardContent>
+                <CardContent>
                     <Typography paragraph>
                     Design and develop the required solutions by the business for the new virtual banking platform, 
                     supporting the process of digital transformation that banks currently experience in Colombia in the Digital Factory.
@@ -170,7 +139,6 @@ function MainBody(props) {
                     JUnit and Mockito, AngularIO, React, Jasmine, Redis, Dynomite, MicrosoftSQLServer, Docker, Atlassian suite, Git, Sonar, Jenkins.
                     </Typography>
                   </CardContent>
-                </Collapse>
               </Card>
                 <br />
               <Card className={classes.root}>
@@ -179,18 +147,6 @@ function MainBody(props) {
                     <Avatar aria-label="recipe" className={classes.avatar}>
                       DF
                     </Avatar>
-                  }
-                  action={
-                    <IconButton
-                    className={clsx(classes.expand, {
-                      [classes.expandOpen]: expanded2,
-                    })}
-                    onClick={handleExpandClick2}
-                    aria-expanded={expanded2}
-                    aria-label="show more"
-                  >
-                    <ExpandMoreIcon />
-                  </IconButton>
                   }
                   title={
                     <React.Fragment>
@@ -211,8 +167,7 @@ function MainBody(props) {
                   Senior Software Engineer
                   </Typography>
                 </CardContent>
-                <Collapse in={expanded2} timeout="auto" unmountOnExit>
-                  <CardContent>
+                <CardContent>
                     <Typography paragraph>
                     Design and development of the Fintech platform for the payment medium "PayU Te Fia", 
                     applying a stack of technologies and design focused on the scalability, 
@@ -221,7 +176,6 @@ function MainBody(props) {
                     to determine if it is a person to obtain the application service of basic business rules and a behavior model.
                     </Typography>
                   </CardContent>
-                </Collapse>
               </Card>
               <br />
               <Card className={classes.root}>
@@ -230,18 +184,6 @@ function MainBody(props) {
                     <Avatar aria-label="recipe" className={classes.avatar}>
                       AE
                     </Avatar>
-                  }
-                  action={
-                    <IconButton
-                    className={clsx(classes.expand, {
-                      [classes.expandOpen]: expanded3,
-                    })}
-                    onClick={handleExpandClick3}
-                    aria-expanded={expanded3}
-                    aria-label="show more"
-                  >
-                    <ExpandMoreIcon />
-                  </IconButton>
                   }
                   title={
                     <React.Fragment>
@@ -262,8 +204,7 @@ function MainBody(props) {
                   Software Engineer
                   </Typography>
                 </CardContent>
-                <Collapse in={expanded3} timeout="auto" unmountOnExit>
-                  <CardContent>
+                <CardContent>
                     <Typography paragraph>
                     Software Development: Leader in Requirements Analysis and development of transactional applications with technologies, 
                     using JavaEE on WebLogic and Glassfish, Oracle 11g, PL / SQL, frameworks such as RichFaces, Primefaces and Omnifaces. 
@@ -274,7 +215,6 @@ function MainBody(props) {
                     Advanced knowledge in paradigm of object oriented development and basic knowledge in paradigm and functional programming.
                     </Typography>
                   </CardContent>
-                </Collapse>
               </Card>
                 
             </div>
