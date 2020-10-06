@@ -28,6 +28,8 @@ import CardContent from '@material-ui/core/CardContent';
 import LinkedInIcon from "../../images/linkedin.svg";
 import TwitterIcon from "../../images/twitter.svg";
 import InstagramIcon from "../../images/instagram.png";
+import GithubIcon from "../../images/github.png";
+import YoutubeIcon from "../../images/youtube.png";
 
 import Link from '@material-ui/core/Link';
 
@@ -86,15 +88,21 @@ function MainBody(props) {
             <div class="main-wrapper" className={classes.mainBodyLeft}>
             
             <div class="section summary-section">
-                <h2 class="section-title"><i class="fa fa-user"></i>Career Profile</h2>
-                <div class="summary">
+            <br />
+            <br />
+              <Typography variant="h6" color="secondary">
+                Career Profile
+              </Typography>
+                
                 <Typography variant="body1" color="Warning" align="center">
                     <p>John Jairo is active, dynamic, enterprising, knows what he wants and works to get it. You can be fully confident that you will perform your duties satisfactorily. He is a nice person, easily connected and respectful to everyone around him</p>
                 </Typography>
-                </div>
+                
             </div>
             <div class="section experiences-section">
-                <h2 class="section-title"><i class="fa fa-briefcase"></i>Experiences</h2>
+              <Typography variant="h6" color="secondary">
+                Experiences
+              </Typography>
 
                 <Card className={classes.root}>
                 <CardHeader
@@ -106,19 +114,19 @@ function MainBody(props) {
                   title={
                     <React.Fragment>
                       <Typography
-                        component="h2"
+                        
                         variant="body2"
                         className={classes.inline}
                         color="textPrimary"
                       >
-                        Scotiabank olpatria | DigitalFactory
+                        Scotiabank Colpatria | DigitalFactory
                       </Typography>
                     </React.Fragment>
                   }
                   subheader="2018 - Current"
                 />
                 <CardContent>
-                  <Typography variant="body1" component="p">
+                  <Typography variant="h6" component="p">
                   Tech Lead | Software Development Engineer
                   </Typography>
                 </CardContent>
@@ -163,7 +171,7 @@ function MainBody(props) {
                   subheader="2017 - 2018"
                 />
                 <CardContent>
-                  <Typography variant="body1" component="p">
+                  <Typography variant="h6" component="p">
                   Senior Software Engineer
                   </Typography>
                 </CardContent>
@@ -200,7 +208,7 @@ function MainBody(props) {
                   subheader="2012 - 2017"
                 />
                 <CardContent>
-                  <Typography variant="body1" component="p">
+                  <Typography variant="h6" component="p">
                   Software Engineer
                   </Typography>
                 </CardContent>
@@ -218,8 +226,11 @@ function MainBody(props) {
               </Card>
                 
             </div>
+            <br />
             <div class="skills-section section">
-                <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
+              <Typography variant="h6" color="secondary">
+                Skills &amp; Proficiency
+              </Typography>
                 <div className={classes.skillset}>    
                 <Chip label="Java"
                   clickable
@@ -278,7 +289,9 @@ function MainBody(props) {
           <div class="sidebar-wrapper">
             <div class="profile-container">
                 <img class="profile" src="assets/images/profile.png" alt="" />
-                <h3 class="tagline">Software Development Engineer</h3>
+                <Typography variant="h6">
+                Software Development Engineer
+                </Typography>
             </div>
             <List className={classes.root} >
                   <ListItem>
@@ -288,7 +301,7 @@ function MainBody(props) {
                     <ListItemText>
                     <Link underline="none" color="inherit"
                     href="https://www.linkedin.com/in/johnquirogac/">
-                    {'LinkedIn'}
+                    {'@johnquirogac'}
                     </Link>
                     </ListItemText>
                   </ListItem>
@@ -314,12 +327,36 @@ function MainBody(props) {
                     </Link>
                     </ListItemText>
                   </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                    <Avatar src={GithubIcon} />
+                    </ListItemAvatar>
+                    <ListItemText>
+                    <Link underline="none" color="inherit"
+                    href="https://www.github.com/johnjqc/">
+                    {'@johnjqc'}
+                    </Link>
+                    </ListItemText>
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                    <Avatar src={YoutubeIcon} />
+                    </ListItemAvatar>
+                    <ListItemText>
+                    <Link underline="none" color="inherit"
+                    href="https://www.youtube.com/channel/UCSZ6j4zbsSNclhklDYgKxEg/">
+                    {'@EsOtroCanal'}
+                    </Link>
+                    </ListItemText>
+                  </ListItem>
                 </List>
             <div class="education-container container-block">
-                <h2 class="container-block-title">Education</h2>
+              <Typography variant="h6" color="secondary">
+                Education
+              </Typography>
                 <List className={classes.root}>
                   <ListItem>
-                    <ListItemText primary="Ingeniería en Telemática" 
+                    <ListItemText primary="Ingeniería en Telemática"
                       secondary={
                         <React.Fragment>
                           <Typography
@@ -373,7 +410,9 @@ function MainBody(props) {
             </div>
             
             <div class="languages-container container-block">
-                <h2 class="container-block-title">Languages</h2>
+              <Typography variant="h6" color="secondary">
+              Languages
+              </Typography>
                 <ul class="list-unstyled interests-list">
                     <li>Spanish <span class="lang-desc">(Native)</span></li>
                     <li>English <span class="lang-desc">B1</span></li>
@@ -381,7 +420,9 @@ function MainBody(props) {
             </div>
             
             <div class="interests-container container-block">
-                <h2 class="container-block-title">Interests</h2>
+              <Typography variant="h6" color="secondary">
+                Interests
+              </Typography>
                 <List className={classes.root} >
                   <ListItem>
                     <ListItemAvatar>
