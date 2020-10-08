@@ -86,25 +86,18 @@ function MainBody(props) {
           <Grid item xs={12} sm={9}>
             
             <div class="main-wrapper" className={classes.mainBodyLeft}>
-            
-            <div class="section summary-section">
-            <br />
-            <br />
-              <Typography variant="h6" color="secondary">
-                Career Profile
-              </Typography>
-                
-                <Typography variant="body1" color="Warning" align="center">
-                    <p>John Jairo is active, dynamic, enterprising, knows what he wants and works to get it. You can be fully confident that you will perform your duties satisfactorily. He is a nice person, easily connected and respectful to everyone around him</p>
-                </Typography>
-                
-            </div>
-            <div class="section experiences-section">
-              <Typography variant="h6" color="secondary">
-                Experiences
+              
+              <Typography variant="h6" color="secondary">Career Profile</Typography>
+              <Typography variant="body1" color="Warning" align="center">
+                <p>John Jairo is active, dynamic, enterprising, knows what he wants and works to get it. 
+                  You can be fully confident that you will perform your duties satisfactorily. 
+                  He is a nice person, easily connected and respectful to everyone around him.
+                </p>
               </Typography>
 
-                <Card className={classes.root}>
+              <Typography variant="h6" color="secondary">Experiences</Typography>
+
+              <Card className={classes.root}>
                 <CardHeader
                   avatar={
                     <Avatar aria-label="recipe" className={classes.avatar}>
@@ -148,7 +141,6 @@ function MainBody(props) {
                     </Typography>
                   </CardContent>
               </Card>
-                <br />
               <Card className={classes.root}>
                 <CardHeader
                   avatar={
@@ -185,7 +177,6 @@ function MainBody(props) {
                     </Typography>
                   </CardContent>
               </Card>
-              <br />
               <Card className={classes.root}>
                 <CardHeader
                   avatar={
@@ -224,14 +215,9 @@ function MainBody(props) {
                     </Typography>
                   </CardContent>
               </Card>
-                
-            </div>
-            <br />
-            <div class="skills-section section">
-              <Typography variant="h6" color="secondary">
-                Skills &amp; Proficiency
-              </Typography>
-                <div className={classes.skillset}>    
+              
+              <Typography variant="h6" color="secondary">Skills &amp; Proficiency</Typography>
+              <div className={classes.skillset}>    
                 <Chip label="Java"
                   clickable
                   color="secondary"
@@ -274,14 +260,8 @@ function MainBody(props) {
                   onDelete={handleDelete}
                   variant="outlined"
                 />
-                <br />
-                <br />
-                <br />
-                
-                </div>
+              </div>
             </div>
-            
-        </div>
           </Grid>
         </Box>
         <Box clone order={{ xs: 2, sm: 3 }}>

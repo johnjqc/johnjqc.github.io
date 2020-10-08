@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = (theme) => ({
   copyright: {
+    marginTop: theme.spacing(10),
     padding: theme.spacing(1),
     background: '#eaeff1',
   },
@@ -16,7 +17,7 @@ function Copyright() {
       {'Copyright © '}
       <Link color="inherit" href="http://johnjqc.github.io/">John Quiroga</Link>
       {' '}
-      {new Date().getFullYear()}
+      2019 - {new Date().getFullYear()}
       {'.'}
     </Typography>
   );
