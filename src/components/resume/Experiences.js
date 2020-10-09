@@ -8,6 +8,14 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
+import Timeline from '@material-ui/lab/Timeline';
+import TimelineItem from '@material-ui/lab/TimelineItem';
+import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
+import TimelineConnector from '@material-ui/lab/TimelineConnector';
+import TimelineContent from '@material-ui/lab/TimelineContent';
+import TimelineDot from '@material-ui/lab/TimelineDot';
+import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
+
 import { grey } from '@material-ui/core/colors';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -25,12 +33,15 @@ const styles = (theme) => ({
         transform: 'rotate(0deg)',
         marginLeft: 'auto',
         transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
+            duration: theme.transitions.duration.shortest,
         }),
     },
     expandOpen: {
         transform: 'rotate(180deg)',
     },
+    withLeftTimeLine: {
+        flex: 0.06,
+    }
 });
 
 function Experiences(props) {
@@ -66,21 +77,50 @@ function Experiences(props) {
                     </Typography>
                 </CardContent>
                 <CardContent>
-                    <Typography paragraph>
-                    Design and develop the required solutions by the business for the new virtual banking platform, 
-                    supporting the process of digital transformation that banks currently experience in Colombia in the Digital Factory.
-                    Support in the revision of pull request.
-                    </Typography>
-                    <Typography paragraph>
-                    Ejecucion de pruebas funcionales cruzadas con los desarrollos de los miebros del equipo. 
-                    Participate in architectural meetings where technologies and solutions to be used throughout the factory are defined, 
-                    to participate in synchronization meetings between the different teams. 
-                    Support in the processes of deployment of artifacts in production environments on Windows and Linux.
-                    </Typography>
-                    <Typography paragraph>
-                    We use Java with spring-boot, spring-security, spring-cloud, Netflix suit how to (Feing clients, Eureka, Zuul Proxy), 
-                    JUnit and Mockito, AngularIO, React, Jasmine, Redis, Dynomite, MicrosoftSQLServer, Docker, Atlassian suite, Git, Sonar, Jenkins.
-                    </Typography>
+                <Timeline>
+                <TimelineItem>
+                        <TimelineOppositeContent className={classes.withLeftTimeLine}>
+                            <Typography color="textSecondary">2020 - actual</Typography>
+                        </TimelineOppositeContent>
+                        <TimelineSeparator>
+                            <TimelineDot color="secondary" />
+                            <TimelineConnector />
+                        </TimelineSeparator>
+                        <TimelineContent>
+                            <Typography paragraph>
+                            I asume the Tech Lead Position, I promove a culture to create software with high standars of security
+                            with the platform www.securecodewarrior.com.
+                            </Typography>
+                        </TimelineContent>
+                    </TimelineItem>
+                    <TimelineItem>
+                        <TimelineOppositeContent className={classes.withLeftTimeLine}>
+                            <Typography color="textSecondary">2018 - 2020</Typography>
+                        </TimelineOppositeContent>
+                        <TimelineSeparator>
+                            <TimelineDot color="secondary" />
+                            <TimelineConnector />
+                        </TimelineSeparator>
+                        <TimelineContent>
+                            <Typography paragraph>
+                            Design and develop the required solutions by the business for the new virtual banking platform, 
+                            supporting the process of digital transformation that banks currently experience in Colombia in the Digital Factory.
+                            Support in the revision of pull request.
+                            </Typography>
+                            <Typography paragraph>
+                            Ejecucion de pruebas funcionales cruzadas con los desarrollos de los miebros del equipo. 
+                            Participate in architectural meetings where technologies and solutions to be used throughout the factory are defined, 
+                            to participate in synchronization meetings between the different teams. 
+                            Support in the processes of deployment of artifacts in production environments on Windows and Linux.
+                            </Typography>
+                            <Typography paragraph>
+                            We use Java with spring-boot, spring-security, spring-cloud, Netflix suit how to (Feing clients, Eureka, Zuul Proxy), 
+                            JUnit and Mockito, AngularIO, React, Jasmine, Redis, Dynomite, MicrosoftSQLServer, Docker, Atlassian suite, Git, Sonar, Jenkins.
+                            </Typography>
+                        </TimelineContent>
+                    </TimelineItem>
+                </Timeline>
+                    
                 </CardContent>
             </Card>
             <Card className={classes.root}>
