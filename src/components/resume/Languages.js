@@ -8,8 +8,7 @@ const styles = (theme) => ({
 });
 
 function Languages(props) {
-    const { classes } = props
-
+    
     return (
         <div>
             <Typography variant="h6" color="secondary">Languages</Typography>

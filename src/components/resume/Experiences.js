@@ -19,12 +19,15 @@ import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
 import { grey } from '@material-ui/core/colors';
 import { withStyles } from '@material-ui/core/styles';
 
+
+import ColpatriaImg from "../../images/colpatria.png";
+import PayUImg from "../../images/payu.png";
+import AEImg from "../../images/ae.png";
+
 const styles = (theme) => ({
     root: {
         marginTop: theme.spacing(5),
         background: grey[50],
-    },title: {
-      margin: theme.spacing(5),
     },
     title: {
         margin: theme.spacing(5),
@@ -40,7 +43,7 @@ const styles = (theme) => ({
         transform: 'rotate(180deg)',
     },
     withLeftTimeLine: {
-        flex: 0.06,
+        flex: 0.05,
     }
 });
 
@@ -51,10 +54,10 @@ function Experiences(props) {
         <div>
             <Typography variant="h6" color="secondary" className={classes.title}>Experiences</Typography>
 
-            <Card className={classes.root}>
+            <Card className={classes.root} variant="outlined">
                 <CardHeader
                     avatar={
-                    <Avatar aria-label="recipe" className={classes.avatar}>
+                    <Avatar aria-label="recipe" className={classes.avatar} src={ColpatriaImg}>
                         DF
                     </Avatar>
                     }
@@ -80,7 +83,7 @@ function Experiences(props) {
                 <Timeline>
                 <TimelineItem>
                         <TimelineOppositeContent className={classes.withLeftTimeLine}>
-                            <Typography color="textSecondary">2020 - actual</Typography>
+                            <Typography color="textSecondary">2020</Typography>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineDot color="secondary" />
@@ -123,10 +126,10 @@ function Experiences(props) {
                     
                 </CardContent>
             </Card>
-            <Card className={classes.root}>
+            <Card className={classes.root} variant="outlined">
                 <CardHeader
                     avatar={
-                    <Avatar aria-label="recipe" className={classes.avatar}>
+                    <Avatar aria-label="recipe" className={classes.avatar} src={PayUImg}>
                         DF
                     </Avatar>
                     }
@@ -159,10 +162,10 @@ function Experiences(props) {
                     </Typography>
                 </CardContent>
             </Card>
-            <Card className={classes.root}>
+            <Card className={classes.root} variant="outlined">
                 <CardHeader
                     avatar={
-                    <Avatar aria-label="recipe" className={classes.avatar}>
+                    <Avatar aria-label="recipe" className={classes.avatar} src={AEImg}>
                         AE
                     </Avatar>
                     }

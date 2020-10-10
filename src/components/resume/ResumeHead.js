@@ -12,7 +12,6 @@ const styles = (theme) => ({
 });
 
 function ResumeHead(props) {
-    const { classes } = props
 
     return (
         <div>

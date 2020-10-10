@@ -17,7 +17,6 @@ const styles = (theme) => ({
 });
 
 function Resume(props) {
-    const { classes } = props
 
     return (
         <Container maxWidth="lg">

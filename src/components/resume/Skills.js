@@ -44,6 +44,13 @@ function Skills(props) {
                   onDelete={handleDelete}
                   variant="outlined"
                 />
+                <Chip label="Bash Scripting"
+                  clickable
+                  color="secondary"
+                  deleteIcon={<DoneIcon />}
+                  onDelete={handleDelete}
+                  variant="outlined"
+                />
                 <Chip label="Spring Boot"
                   clickable
                   color="secondary"
@@ -65,7 +72,77 @@ function Skills(props) {
                   onDelete={handleDelete}
                   variant="outlined"
                 />
+                <Chip label="Hibernate"
+                  clickable
+                  color="secondary"
+                  deleteIcon={<DoneIcon />}
+                  onDelete={handleDelete}
+                  variant="outlined"
+                />
                 <Chip label="PL-SQL"
+                  clickable
+                  color="secondary"
+                  deleteIcon={<DoneIcon />}
+                  onDelete={handleDelete}
+                  variant="outlined"
+                />
+                <Chip label="MongoDB"
+                  clickable
+                  color="secondary"
+                  deleteIcon={<DoneIcon />}
+                  onDelete={handleDelete}
+                  variant="outlined"
+                />
+                <Chip label="OracleDB"
+                  clickable
+                  color="secondary"
+                  deleteIcon={<DoneIcon />}
+                  onDelete={handleDelete}
+                  variant="outlined"
+                />
+                <Chip label="SQLServer"
+                  clickable
+                  color="secondary"
+                  deleteIcon={<DoneIcon />}
+                  onDelete={handleDelete}
+                  variant="outlined"
+                />
+                <Chip label="PostgreSQL"
+                  clickable
+                  color="secondary"
+                  deleteIcon={<DoneIcon />}
+                  onDelete={handleDelete}
+                  variant="outlined"
+                />
+                <Chip label="Redis"
+                  clickable
+                  color="secondary"
+                  deleteIcon={<DoneIcon />}
+                  onDelete={handleDelete}
+                  variant="outlined"
+                />
+                <Chip label="Docker"
+                  clickable
+                  color="secondary"
+                  deleteIcon={<DoneIcon />}
+                  onDelete={handleDelete}
+                  variant="outlined"
+                />
+                <Chip label="Kubernetes"
+                  clickable
+                  color="secondary"
+                  deleteIcon={<DoneIcon />}
+                  onDelete={handleDelete}
+                  variant="outlined"
+                />
+                <Chip label="Scrum"
+                  clickable
+                  color="secondary"
+                  deleteIcon={<DoneIcon />}
+                  onDelete={handleDelete}
+                  variant="outlined"
+                />
+                <Chip label="Kamban"
                   clickable
                   color="secondary"
                   deleteIcon={<DoneIcon />}
