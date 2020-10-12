@@ -43,8 +43,8 @@ const styles = (theme) => ({
         transform: 'rotate(180deg)',
     },
     withLeftTimeLine: {
-        flex: 0.05,
-    }
+        flex: 0.04,
+    },
 });
 
 function Experiences(props) {
@@ -81,7 +81,7 @@ function Experiences(props) {
                 </CardContent>
                 <CardContent>
                 <Timeline>
-                <TimelineItem>
+                <TimelineItem className={classes.TimeLineItem}>
                         <TimelineOppositeContent className={classes.withLeftTimeLine}>
                             <Typography color="textSecondary">2020</Typography>
                         </TimelineOppositeContent>
@@ -90,9 +90,9 @@ function Experiences(props) {
                             <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent>
-                            <Typography paragraph>
+                            <Typography paragraph align="justify">
                             I asume the Tech Lead Position, I promove a culture to create software with high standars of security
-                            with the platform www.securecodewarrior.com.
+                            with the platform Secure Code Warrior.
                             </Typography>
                         </TimelineContent>
                     </TimelineItem>
@@ -105,18 +105,18 @@ function Experiences(props) {
                             <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent>
-                            <Typography paragraph>
+                            <Typography paragraph align="justify">
                             Design and develop the required solutions by the business for the new virtual banking platform, 
                             supporting the process of digital transformation that banks currently experience in Colombia in the Digital Factory.
                             Support in the revision of pull request.
                             </Typography>
-                            <Typography paragraph>
+                            <Typography paragraph align="justify">
                             Ejecucion de pruebas funcionales cruzadas con los desarrollos de los miebros del equipo. 
                             Participate in architectural meetings where technologies and solutions to be used throughout the factory are defined, 
                             to participate in synchronization meetings between the different teams. 
                             Support in the processes of deployment of artifacts in production environments on Windows and Linux.
                             </Typography>
-                            <Typography paragraph>
+                            <Typography paragraph align="justify">
                             We use Java with spring-boot, spring-security, spring-cloud, Netflix suit how to (Feing clients, Eureka, Zuul Proxy), 
                             JUnit and Mockito, AngularIO, React, Jasmine, Redis, Dynomite, MicrosoftSQLServer, Docker, Atlassian suite, Git, Sonar, Jenkins.
                             </Typography>
@@ -153,7 +153,7 @@ function Experiences(props) {
                     </Typography>
                 </CardContent>
                 <CardContent>
-                    <Typography paragraph>
+                    <Typography paragraph align="justify">
                     Design and development of the Fintech platform for the payment medium "PayU Te Fia", 
                     applying a stack of technologies and design focused on the scalability, 
                     high performance and specific functionalities that contribute to the measures of the business favoring its growth. 
@@ -189,13 +189,13 @@ function Experiences(props) {
                     </Typography>
                 </CardContent>
                 <CardContent>
-                    <Typography paragraph>
+                    <Typography paragraph align="justify">
                     Software Development: Leader in Requirements Analysis and development of transactional applications with technologies, 
                     using JavaEE on WebLogic and Glassfish, Oracle 11g, PL / SQL, frameworks such as RichFaces, Primefaces and Omnifaces. 
                     Web services, backend applications and IBM MQ clients. Development of applications for financial entities under the 
                     message standard of the SWIFT banking network. Development of SWIFT value-added corporate applications for ATMs.
                     </Typography>
-                    <Typography paragraph>
+                    <Typography paragraph align="justify">
                     Advanced knowledge in paradigm of object oriented development and basic knowledge in paradigm and functional programming.
                     </Typography>
                 </CardContent>
